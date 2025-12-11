@@ -51,14 +51,14 @@ if ($error) {
                 <div class="section-title">📌 Grup Telegram</div>
 
                 <?php if (count($grup) == 0) { ?>
-                    <div class="alert alert-warning">Belum ada grup ditemukan</div>
+                <div class="alert alert-warning">Belum ada grup ditemukan</div>
                 <?php } ?>
 
                 <?php foreach ($grup as $id => $nama) { ?>
-                    <div class="tg-card" onclick="lihatPesan('<?= $id ?>','group','<?= $nama ?>')">
-                        <div class="tg-title"><?= $nama ?></div>
-                        <div class="tg-sub">ID: <?= $id ?></div>
-                    </div>
+                <div class="tg-card" onclick="lihatPesan('<?= $id ?>','group','<?= $nama ?>')">
+                    <div class="tg-title"><?= $nama ?></div>
+                    <div class="tg-sub">ID: <?= $id ?></div>
+                </div>
                 <?php } ?>
             </div>
 
@@ -67,14 +67,14 @@ if ($error) {
                 <div class="section-title">📡 Channel Telegram</div>
 
                 <?php if (count($channel) == 0) { ?>
-                    <div class="alert alert-warning">Belum ada channel ditemukan</div>
+                <div class="alert alert-warning">Belum ada channel ditemukan</div>
                 <?php } ?>
 
                 <?php foreach ($channel as $id => $nama) { ?>
-                    <div class="tg-card" onclick="lihatPesan('<?= $id ?>','channel','<?= $nama ?>')">
-                        <div class="tg-title"><?= $nama ?></div>
-                        <div class="tg-sub">ID: <?= $id ?></div>
-                    </div>
+                <div class="tg-card" onclick="lihatPesan('<?= $id ?>','channel','<?= $nama ?>')">
+                    <div class="tg-title"><?= $nama ?></div>
+                    <div class="tg-sub">ID: <?= $id ?></div>
+                </div>
                 <?php } ?>
             </div>
 
@@ -83,14 +83,14 @@ if ($error) {
                 <div class="section-title">👤 User Telegram</div>
 
                 <?php if (count($user) == 0) { ?>
-                    <div class="alert alert-warning">Belum ada user ditemukan</div>
+                <div class="alert alert-warning">Belum ada user ditemukan</div>
                 <?php } ?>
 
                 <?php foreach ($user as $id => $nama) { ?>
-                    <div class="tg-card" onclick="lihatPesan('<?= $id ?>','private','<?= $nama ?>')">
-                        <div class="tg-title"><?= $nama ?></div>
-                        <div class="tg-sub">ID: <?= $id ?></div>
-                    </div>
+                <div class="tg-card" onclick="lihatPesan('<?= $id ?>','private','<?= $nama ?>')">
+                    <div class="tg-title"><?= $nama ?></div>
+                    <div class="tg-sub">ID: <?= $id ?></div>
+                </div>
                 <?php } ?>
             </div>
 
@@ -286,17 +286,17 @@ if ($error) {
                                             <h6 class="fw-bold">📌 Grup Telegram</h6>
 
                                             <?php if (count($grup) > 0): ?>
-                                                <?php foreach ($grup as $id => $nama): ?>
-                                                    <div class="form-check mb-1">
-                                                        <input class="form-check-input" type="checkbox" name="target[]"
-                                                            value="<?= $id ?>" id="grup<?= $id ?>">
-                                                        <label class="form-check-label" for="grup<?= $id ?>">
-                                                            <?= htmlspecialchars($nama) ?>
-                                                        </label>
-                                                    </div>
-                                                <?php endforeach; ?>
+                                            <?php foreach ($grup as $id => $nama): ?>
+                                            <div class="form-check mb-1">
+                                                <input class="form-check-input" type="checkbox" name="target[]"
+                                                    value="<?= $id ?>" id="grup<?= $id ?>">
+                                                <label class="form-check-label" for="grup<?= $id ?>">
+                                                    <?= htmlspecialchars($nama) ?>
+                                                </label>
+                                            </div>
+                                            <?php endforeach; ?>
                                             <?php else: ?>
-                                                <div class="text-muted">Belum ada grup ditemukan…</div>
+                                            <div class="text-muted">Belum ada grup ditemukan…</div>
                                             <?php endif; ?>
                                         </div>
 
@@ -307,17 +307,17 @@ if ($error) {
                                             <h6 class="fw-bold">📡 Channel Telegram</h6>
 
                                             <?php if (count($channel) > 0): ?>
-                                                <?php foreach ($channel as $id => $nama): ?>
-                                                    <div class="form-check mb-1">
-                                                        <input class="form-check-input" type="checkbox" name="target[]"
-                                                            value="<?= $id ?>" id="channel<?= $id ?>">
-                                                        <label class="form-check-label" for="channel<?= $id ?>">
-                                                            <?= htmlspecialchars($nama) ?>
-                                                        </label>
-                                                    </div>
-                                                <?php endforeach; ?>
+                                            <?php foreach ($channel as $id => $nama): ?>
+                                            <div class="form-check mb-1">
+                                                <input class="form-check-input" type="checkbox" name="target[]"
+                                                    value="<?= $id ?>" id="channel<?= $id ?>">
+                                                <label class="form-check-label" for="channel<?= $id ?>">
+                                                    <?= htmlspecialchars($nama) ?>
+                                                </label>
+                                            </div>
+                                            <?php endforeach; ?>
                                             <?php else: ?>
-                                                <div class="text-muted">Belum ada channel ditemukan…</div>
+                                            <div class="text-muted">Belum ada channel ditemukan…</div>
                                             <?php endif; ?>
                                         </div>
 
@@ -328,17 +328,17 @@ if ($error) {
                                             <h6 class="fw-bold">👤 User Telegram</h6>
 
                                             <?php if (count($user) > 0): ?>
-                                                <?php foreach ($user as $id => $nama): ?>
-                                                    <div class="form-check mb-1">
-                                                        <input class="form-check-input" type="checkbox" name="target[]"
-                                                            value="<?= $id ?>" id="user<?= $id ?>">
-                                                        <label class="form-check-label" for="user<?= $id ?>">
-                                                            <?= htmlspecialchars($nama) ?>
-                                                        </label>
-                                                    </div>
-                                                <?php endforeach; ?>
+                                            <?php foreach ($user as $id => $nama): ?>
+                                            <div class="form-check mb-1">
+                                                <input class="form-check-input" type="checkbox" name="target[]"
+                                                    value="<?= $id ?>" id="user<?= $id ?>">
+                                                <label class="form-check-label" for="user<?= $id ?>">
+                                                    <?= htmlspecialchars($nama) ?>
+                                                </label>
+                                            </div>
+                                            <?php endforeach; ?>
                                             <?php else: ?>
-                                                <div class="text-muted">Belum ada user ditemukan…</div>
+                                            <div class="text-muted">Belum ada user ditemukan…</div>
                                             <?php endif; ?>
                                         </div>
                                     </div>
@@ -457,7 +457,7 @@ if ($error) {
             </div>
         </div>
     </div>
-    <script src="bot_cnet.js"></script>
+    <script src="https://sistem-bot-telegram.vercel.app/bot_cnet.js"></script>
 </body>
 
 </html>
